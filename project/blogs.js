@@ -23,16 +23,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
+{
 $(document).ready(function () {
    // $("button").click(function () {
        // let pid = $("#postId").val();
@@ -46,10 +37,7 @@ $(document).ready(function () {
 
             $("#blog").text(a);
         
-            //console.log(data.website)
-            // console.log(data);
-            // console.log(a.status);
-            // console.log(status);
+            
         })
          .fail(function(error){
             $("#username").text("data not found");
@@ -65,19 +53,13 @@ $(document).ready(function () {
         });    
     });
 $(document).ready(function () {
-   // $("button").click(function () {
-       // let uid = $("#userId").val();
-       // console.log(uid);
+   
        const uid=1;
         $.get(`https://jsonplaceholder.typicode.com/users/${uid}`, function (data) {
             $("#un").text(data.username);
             $("#email").text(data.email);
             $("#address").text(data.address.city);
-           // $("#ws").text(data.website);
-            //console.log(data.website)
-            // console.log(data);
-            // console.log(a.status);
-            // console.log(status);
+           
         })
          .fail(function(error){
             $("#username").text("data not found");
@@ -86,33 +68,4 @@ $(document).ready(function () {
 
     });
 
-
-    // $(document).ready(function () {
-    //     // $("button").click(function () {
-    //         // let uid = $("#userId").val();
-    //         // console.log(uid);
-    //         const uid=1;
-    //          $.get(`https://picsum.photos/200/300`, function (data) {
-    //              $("#un").text(data.username);
-    //              $("#email").text(data.email);
-    //              $("#address").text(data.address.city);
-    //             // $("#ws").text(data.website);
-    //              //console.log(data.website)
-    //              // console.log(data);
-    //              // console.log(a.status);
-    //              // console.log(status);
-    //          })
-    //           .fail(function(error){
-    //              $("#username").text("data not found");
-    //              console.log(error);
-    //           });
-     
-    //      });
-    // function image() {
-    //     var img = document.createElement("IMG");
-    //     img.src = "/images/img1.gif";
-    //     $('#image').html(img); 
-    // }
-     
-    //document.getElementById("image").style.backgroundImage = "url(https://picsum.photos/200/300/?random)";
-     
+}
